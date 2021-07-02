@@ -1,0 +1,17 @@
+{
+  "name": "movieRental",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {"dev": "nodemon src/server.js"},
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.9",
+    "pg-hstore": "^2.3.4",
+    "ph": "^0.1.10",
+    "sequelize": "^6.6.4"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}
