@@ -12,7 +12,7 @@ class User extends Model {
   }
 
   static associate(models) {
-    this.belongsToMany(models.Movies, {
+    this.belongsToMany(models.Movie, {
       foreignKey: "user_id",
       through: "user_movies",
       as: "movies",
