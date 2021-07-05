@@ -2,7 +2,14 @@ const { Model, DataTypes } = require("sequelize");
 
 class Movie extends Model {
   static init(sequelize) {
-    super.init({ name: DataTypes.STRING }, { sequelize, tableName: "movies" });
+    super.init(
+      {
+        title: DataTypes.STRING,
+        director: DataTypes.STRING,
+        quantity: DataTypes.INTEGER,
+      },
+      { sequelize, tableName: "movies" }
+    );
   }
 
   static associate(models) {

@@ -9,7 +9,9 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
-      name: { type: Sequelize.STRING, allowNull: false },
+      title: { type: Sequelize.STRING, allowNull: false },
+      director: { type: Sequelize.STRING, allowNull: false },
+      quantity: { type: Sequelize.INTEGER, allowNull: false },
       created_at: { type: Sequelize.DATE, allowNull: false },
       updated_at: { type: Sequelize.DATE, allowNull: false },
     });

@@ -8,7 +8,7 @@ module.exports = {
     const user = await User.findByPk(user_id, {
       include: {
         association: "movies",
-        attributes: ["name"],
+        attributes: ["title", "director", "quantity"],
         through: { attributes: [] },
       },
     });
@@ -18,7 +18,7 @@ module.exports = {
 
   async store(req, res) {
     const { user_id } = req.params;
-    const { name } = req.body;
+    const { title, director, quantity } = req.body;
 
     const user = await User.findByPk(user_id);
 
@@ -26,7 +26,9 @@ module.exports = {
       return res.status(400).json({ error: "User not found" });
     }
 
-    const [movie] = await Movie.findOrCreate({ where: { name } });
+    const [movie] = await Movie.findOrCreate({
+      where: { title, director, quantity },
+    });
 
     await user.addMovie(movie);
 
@@ -35,7 +37,7 @@ module.exports = {
 
   async delete(req, res) {
     const { user_id } = req.params;
-    const { name } = req.body;
+    const { title } = req.body;
 
     const user = await User.findByPk(user_id);
 
@@ -43,7 +45,7 @@ module.exports = {
       return res.status(400).json({ error: "User not found" });
     }
 
-    const movie = await Movie.findOne({ where: { name } });
+    const movie = await Movie.findOne({ where: { title } });
 
     await user.removeMovie(movie);
 
