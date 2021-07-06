@@ -2,7 +2,7 @@
 
 Modelo de web service para locadora desenvolvido em NodeJs e PostgreSQL usando Sequelize.
 
-#Instalando o sistema
+# Instalando o sistema
 1) Faça o clone do projeto com git e instale as dependencias.
    ```
    git clone git@github.com:wandersonchaves/locadora_planos_acessoria.git locadora
@@ -28,7 +28,7 @@ Modelo de web service para locadora desenvolvido em NodeJs e PostgreSQL usando S
 yarn dev
 ```
 
-# Documentação da API locadora
+# Documentação da API Locadora
 
 ## http://localhost:3333/users/1/movies
 Método: GET. Listar filmes disponíveis.
@@ -38,7 +38,7 @@ Método: GET. Listar filmes disponíveis.
 ## http://localhost:3333/report
 Método: GET. Pesquisar filmes.
 
-__title:__ Pesquisa string no título do filme. String.
+- __title:__ Pesquisa string no título do filme. String.
 
 ## http://localhost:3333/users/1/movies
 Método: POST. Atualiza o estado do Filme para Alugado.
@@ -48,8 +48,8 @@ Método: POST. Atualiza o estado do Filme para Alugado.
 ## http://localhost:3333/auth
 Método: POST. Faz o login de usuário no sistema.
 
-__email:__ E-mail do usuário. Obrigatório.
-__password:__ Palavra-chave do usuário.  Obrigatório.
+- __email:__ E-mail do usuário. Obrigatório.
+- __password:__ Palavra-chave do usuário.  Obrigatório.
 
 #### RETORNO: Informações do Usuário ou mensagem de alerta. json/objeto.
 
@@ -63,11 +63,10 @@ Não há termos para essa requisição.
 ## http://localhost:3333/users
 Método: POST. Adiciona um novo usuário.
 
-__name:__ Nome de exibição do usuário. Obrigatório.
-__email:__ E-mail do novo usuário. Obrigatório.
-__password:__ Palavra-chave do novo usuário. Obrigatório.
+- __name:__ Nome de exibição do usuário. Obrigatório.
+- __email:__ E-mail do novo usuário. Obrigatório.
+- __password:__ Palavra-chave do novo usuário. Obrigatório.
 
 #### RETORNO: Messagem de sucesso ou alerta. json/objeto.
-
 
 Desenvolvido por Wanderson Chaves. &copy; 2021
